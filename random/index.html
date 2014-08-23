@@ -1,0 +1,8 @@
+---
+title: random
+---
+<script>
+var posts = [{% for post in site.posts  %}"{{ post.url }}", {% endfor %}];
+var id = Math.floor(Math.random() * posts.length);
+window.location.href = posts[id];
+</script>

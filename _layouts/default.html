@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+	<meta name="viewport" content="width=device-width, height=device-height, maximum-scale=10.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=1" />
+	<meta name="description" content="a place to find puns by daniel. "/>
+	<meta name="author" content="eurica inc. "/>
+	<link rel="icon" href="/images/logo-small.png" />
+	<link rel="stylesheet" href="/styles/main.css" />
+	<link rel="stylesheet" href="/styles/icomoon/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Coming+Soon' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header class="site-header">
+		<h1><a href="/"><div class="circle">2punny</div></a></h1>
+		<nav>
+			<a href="/random" {% if page.url contains "/random" %}class="active"{% endif %}><span>random</span></a>
+			<a href="/all" {% if page.url contains "/all" %}class="active"{% endif %}><span>see-'em-all</span></a>
+			<a href="http://facebook.com/2punny" target="_blank"><i class="icon-facebook"></i></a>
+			<a href="/about" {% if page.url contains "/about" %}class="active"{% endif %}><span>about</span></a>
+		</nav>
+	</header>
+	{{ content }}
+	<footer>
+		<p>&copy; 2014 <a href="http://facebook.com/euricainc">eurica inc. </a></p>
+	</footer>
+</body>
+</html>
