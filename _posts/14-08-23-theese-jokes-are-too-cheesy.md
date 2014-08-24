@@ -1,6 +1,6 @@
 ---
 layout: pun
 color: "#fff"
-background-color: "#2ecc71"
+background: "#2ecc71"
 ---
 Theese jokes are too cheesy
