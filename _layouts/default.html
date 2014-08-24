@@ -22,8 +22,10 @@
 		</nav>
 	</header>
 	{{ content }}
+	{% if page.footer != "hidden" %}
 	<footer>
 		<p>&copy; 2014 <a href="http://facebook.com/euricainc">eurica inc. </a></p>
 	</footer>
+	{% endif %}
 </body>
 </html>

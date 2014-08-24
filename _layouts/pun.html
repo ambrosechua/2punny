@@ -1,4 +1,15 @@
 ---
 layout: default
+footer: hidden
 ---
-{{content}}
+<main class="pun">
+	<div class="puncontent" style="background-color: {{ page.background-color }}; color: {{ page.color }};">
+		{{content}}
+	</div>
+	<div class="share">
+		<a class="btn previous" href="#previous"><i class="icon-arrow-left"></i>Prev</a>
+		<a class="btn" href="#facebook"><i class="icon-facebook"></i>Facebook</a>
+		<a class="btn" href="#twitter"><i class="icon-twitter"></i>Twitter</a>
+		<a class="btn next" href="#next"><i class="icon-arrow-right"></i>Next</a>
+	</div>
+</main>

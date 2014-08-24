@@ -20,12 +20,22 @@ body {
 
 main {
 	margin: 0 auto;
-	max-width: 720px;
+	max-width: 920px;
 	padding: 20px;
 	min-width: 240px;
+
+	padding: 6vw;
+	/*padding-bottom: 10vh;*/
+	font-size: calc(0.8vw + 12px);
+	line-height: 1.4em;
+	padding-top: 100px;
+}
+main.pun {
+	padding: 0;
+	margin: 0;
 }
 
-a {
+a:not(.btn) {
 	color: inherit;
 	text-decoration: inherit;
 	box-shadow: 0 10px 0 -8px #444;/*
@@ -40,34 +50,79 @@ a:hover, a:focus {
 }
 .btn {
   color: #444;
-  line-height: 1em;
+  line-height: 1.2em;
   color: inherit;
   text-decoration: none;
-  display: inline-block;/*
-  margin: 1em;*/
+  display: inline-block;
   border-radius: 4px;
   background-color: #fff;
-  box-shadow: 0 0 0 0 #444 inset, 0.3em 0.2em 0 0 #bbb;
-  border: 0.2em solid #444;
-  padding: 0.8em;
+  box-shadow: 0 0 0 0 #444 inset;
+  border: 2px solid #444;
+  padding: 0.3em;
   text-align: center;
-  transition: 0.25s box-shadow, 0.25s -webkit-transform;
-}
-.btn {
-  padding: 0.7em;
+  transition: 0.25s box-shadow, 0.25s color;
 }
 .btn:hover {
-  box-shadow: 0 4em 0 0 #444 inset, 0em 0em 0 0 #bbb;
-  -webkit-transform: translate(0.3em, 0.2em);
+  box-shadow: 0 2em 0 0 #444 inset;
   color: #fff;
 }
 .btn.disabled {
   opacity: 0.8;
 }
 .btn.disabled:hover {
-  box-shadow: 0 0 0 0 #444 inset, 0.3em 0.2em 0 0 #bbb;
-  -webkit-transform: translate(0, 0);
+  box-shadow: 0 0 0 0 #444 inset;
   color: #444;
+}
+
+.share {
+	padding: 20px;
+	text-align: center;/*
+	position: absolute;
+	bottom: 5vh;
+	width: 80vw;
+	left: 10vw;*/
+}
+.share .btn {
+	font-size: 1.2em;
+	font-family: "Shadows Into Light Two", sans-serif;
+}
+.share .btn * {
+	vertical-align: bottom;
+}
+.share .btn i {
+	margin-right: 0.3em;
+}
+.btn[href="#facebook"] {
+	border-color: #3b5998 !important;
+	color: #3b5998;
+	box-shadow: 0 0 0 0 #3b5998 inset;
+}
+.btn[href="#facebook"]:hover {
+	box-shadow: 0 2em 0 0 #3b5998 inset;
+	color: #fff;
+}
+.btn[href="#twitter"] {
+	border-color: #00aced !important;
+	color: #00aced;
+	box-shadow: 0 0 0 0 #00aced inset;
+}
+.btn[href="#twitter"]:hover {
+	box-shadow: 0 2em 0 0 #00aced inset;
+	color: #fff;
+}
+.previous {
+	float: left;
+}
+.next {
+	float: right;
+}
+
+.puncontent {
+	font-size: 50px;
+	line-height: 1.2em;
+	padding: 2em 1em;
+	min-height: 80vh;
+	padding-top: 3em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -179,7 +234,7 @@ th {
 	background-repeat: no-repeat;
 
 	font-size: 24px;
-	font-family: "Shadows Into Light Two";
+	font-family: "Shadows Into Light Two", sans-serif;
 }
 .site-header * {
 	padding: 0;
@@ -273,14 +328,6 @@ th {
 }
 
 
-
-main {
-	padding: 10vh 6vw;
-	padding-bottom: 20vh;
-	font-size: calc(0.8vw + 12px);
-	line-height: 1.4em;
-	padding-top: 100px;
-}
 
 
 
