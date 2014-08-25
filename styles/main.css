@@ -88,14 +88,14 @@ a:hover, a:focus {
 	font-size: 1.2em;
 	font-family: "Shadows Into Light Two", sans-serif;
 }
-.share .btn * {
+.btn * {
 	vertical-align: bottom;
 }
-.share .btn i {
+.btn i {
 	margin: 0 0.1em;
 }
-.share .btn span {
-	margin-left: 0.3em;
+.btn span {
+	margin: 0 0.3em;
 }
 .btn[href="#facebook"] {
 	border-color: #3b5998 !important;

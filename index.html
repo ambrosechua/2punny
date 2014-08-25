@@ -2,4 +2,12 @@
 layout: page
 title: "hello"
 ---
-We are busy fixing the site up for the best pun-viewing experience. Watch out!
+
+  {% assign post = site.posts.last %}
+  {% assign content = post.content %}
+
+<h1>Ready for puns? </h1>
+
+<p>And cancer? And madness?</p>
+<br />
+<a href="{{ post.url }}" class="btn" style="font-size: 1.2em;">If you dare <i class="icon-arrow-right"></i></a>

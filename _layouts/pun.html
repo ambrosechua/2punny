@@ -4,12 +4,47 @@ footer: hidden
 ---
 <main class="pun">
 	<div class="puncontent" style="background: {{ page.background }}; color: {{ page.color }};">
-		{{content}}
+		{{ content }}
 	</div>
 	<div class="share">
-		{% if page.previous %}<a class="btn previous" href="{{ page.previous.url }}"><i class="icon-arrow-left"></i>Prev</a>{% endif %}
-		<a class="btn" href="#facebook"><i class="icon-facebook"></i><span class="hidewhensmall">Facebook</span></a>
-		<a class="btn" href="#twitter"><i class="icon-twitter"></i><span class="hidewhensmall">Twitter</span></a>
-		{% if page.next %}<a class="btn next" href="{{ page.next.url }}"><i class="icon-arrow-right"></i>Next</a>{% endif %}
+		{% if page.previous %}<a class="btn previous" href="{{ page.previous.url }}"><i class="icon-arrow-left"></i><span>Prev</span></a>{% endif %}
+		<a class="btn facebook" href="#facebook"><i class="icon-facebook"></i><span class="hidewhensmall">Facebook</span></a>
+		<a class="btn twitter" href="#twitter"><i class="icon-twitter"></i><span class="hidewhensmall">Twitter</span></a>
+		{% if page.next %}<a class="btn next" href="{{ page.next.url }}"><span>Next</span><i class="icon-arrow-right"></i></a>{% endif %}
 	</div>
 </main>
+<script>
+var url = "http://2punny.uni.me" + window.location.pathname;
+var text = encodeURI("{{ content | strip_html }} | " + "Funny? Get more puns on 2punny! |");
+
+document.querySelector(".twitter").addEventListener("click", function (e) {
+	e.preventDefault();
+	window.open("https://twitter.com/share?url=" + url + "&text=" + text + "", "_blank", "height=320,width=480");
+});
+
+document.querySelector(".facebook").addEventListener("click", function (e) {
+	e.preventDefault();
+	FB.ui(
+	 {
+	  method: 'share',
+	  href: url
+	}, function(response){});
+});
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '556080077853061',
+      xfbml      : true,
+      version    : 'v2.0'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+</script>
