@@ -15,7 +15,7 @@ footer: hidden
 </main>
 <script>
 var url = "http://2punny.uni.me" + window.location.pathname;
-var text = encodeURI("{{ content | strip_html }} | " + "Funny? Get more puns on 2punny! |");
+var text = encodeURI(document.querySelector(".puncontent").innerText.replace("\n", "") + " | " + "Funny? Get more puns on 2punny");
 
 document.querySelector(".twitter").addEventListener("click", function (e) {
 	e.preventDefault();
