@@ -14,7 +14,7 @@ footer: hidden
 	</div>
 </main>
 <script>
-var url = "http://2punny.uni.me" + window.location.pathname;
+var url = encodeURI("http://2punny.uni.me" + window.location.pathname);
 var text = encodeURI(document.querySelector(".puncontent").innerText.replace("\n", "") + " | " + "Funny? Get more puns on 2punny");
 
 document.querySelector(".twitter").addEventListener("click", function (e) {
@@ -24,27 +24,28 @@ document.querySelector(".twitter").addEventListener("click", function (e) {
 
 document.querySelector(".facebook").addEventListener("click", function (e) {
 	e.preventDefault();
-	FB.ui(
-	 {
-	  method: 'share',
-	  href: url
-	}, function(response){});
+	window.open("https://www.facebook.com/dialog/share?app_id=556080077853061&display=popup&href=" + url + "&redirect_uri=" + url, "_blank", "height=320,width=480");
+	// FB.ui(
+	//  {
+	//   method: 'share',
+	//   href: url
+	// }, function(response){});
 });
 
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '556080077853061',
-      xfbml      : true,
-      version    : 'v2.0'
-    });
-  };
+  // window.fbAsyncInit = function() {
+  //   FB.init({
+  //     appId      : '556080077853061',
+  //     xfbml      : true,
+  //     version    : 'v2.0'
+  //   });
+  // };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+  // (function(d, s, id){
+  //    var js, fjs = d.getElementsByTagName(s)[0];
+  //    if (d.getElementById(id)) {return;}
+  //    js = d.createElement(s); js.id = id;
+  //    js.src = "//connect.facebook.net/en_US/sdk.js";
+  //    fjs.parentNode.insertBefore(js, fjs);
+  //  }(document, 'script', 'facebook-jssdk'));
 
 </script>
