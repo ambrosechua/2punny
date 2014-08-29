@@ -1,8 +1,7 @@
 ---
 layout: pun
 color: "#fff"
-background: "hsl(102, 50%, 50%)"
-id: 2
+background: "hsl(102, 75%, 50%)"
 ---
 Q: What's the midget of electricity?
 

@@ -1,7 +1,6 @@
 ---
 layout: pun
 color: "#fff"
-background: "hsl(287, 50%, 50%)"
-id: 1
+background: "hsl(287, 75%, 50%)"
 ---
-When time is hungry, it goes back four seconds.
+When time is hungry, it goes back ***four*** seconds.

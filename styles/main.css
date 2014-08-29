@@ -42,8 +42,8 @@ a:not(.btn) {
 	text-decoration: inherit;
 	box-shadow: 0 10px 0 -8px #444;/*
 	box-shadow: 0 12px 0 -10px #444;*/
-	text-shadow:
-		1px 0 #fff, 0 1px #fff, -1px 0 #fff, 0 -1px #fff;/*,
+	/*text-shadow:
+		1px 0 #fff, 0 1px #fff, -1px 0 #fff, 0 -1px #fff;*//*,
 		1px 1px #fff, -1px 1px #fff, -1px 1px #fff, -1px -1px #fff*/
 	-webkit-transition: 0.5s box-shadow;
 }
@@ -75,6 +75,9 @@ a:hover, a:focus {
   box-shadow: 0 0 0 0 #444 inset;
   color: #444;
 }
+.noclick {
+	pointer-events: none;
+}
 
 .share {
 	padding: 20px;
@@ -86,6 +89,7 @@ a:hover, a:focus {
 }
 .share .btn {
 	font-size: 1.2em;
+	line-height: 1em;
 	font-family: "Shadows Into Light Two", sans-serif;
 }
 .btn * {
@@ -120,6 +124,12 @@ a:hover, a:focus {
 }
 .next {
 	float: right;
+}
+.btn.next, .btn.previous {
+	opacity: 0;
+}
+.opaque, .btn.opaque {
+	opacity: 1;
 }
 
 .puncontent {
@@ -332,6 +342,15 @@ th {
 	font-weight: 400;
 }
 
+.punnylisting {
+	text-align: center;
+	list-style: decimal;
+	padding: 0;
+	font-size: 1.2em;
+}
+.punnylisting li {
+	padding: 0.4em 0;
+}
 
 
 
