@@ -27,9 +27,11 @@ main {
 
 	padding: 6vw;
 	/*padding-bottom: 10vh;*/
+	font-size: 17px;
 	font-size: calc(0.8vw + 12px);
 	line-height: 1.4em;
-	padding-top: 20vh;
+	/*padding-top: 20vh;*/
+	padding-top: 5em;
 }
 main.pun {
 	padding: 0;
@@ -353,10 +355,11 @@ th {
 	text-align: center;
 	list-style: decimal;
 	/*padding: 0;*/
-	font-size: 1.2em;
+	font-size: 1.1em;
+	line-height: 1.7em;
 }
 .punnylisting li {
-	padding: 0.4em 0;
+	padding: 0.25em 0;
 }
 
 
