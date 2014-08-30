@@ -16,20 +16,20 @@ body {
 	background-color: #fff;
 	color: #444;
 	-webkit-font-smoothing: antialiased;
-	-webkit-tap-highlight-color: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 main {
 	margin: 0 auto;
 	max-width: 920px;
-	padding: 20px;
+	/*padding: 5vh 5vw;*/
 	min-width: 240px;
 
 	padding: 6vw;
 	/*padding-bottom: 10vh;*/
 	font-size: calc(0.8vw + 12px);
 	line-height: 1.4em;
-	padding-top: 150px;
+	padding-top: 20vh;
 }
 main.pun {
 	padding: 0;
@@ -63,6 +63,9 @@ a:hover, a:focus {
   padding: 0.3em;
   text-align: center;
   transition: 0.25s box-shadow, 0.25s color;
+	font-size: 1.2em;
+	line-height: 1em;
+	font-family: "Shadows Into Light Two", sans-serif;
 }
 .btn:hover {
   box-shadow: 0 2em 0 0 #444 inset;
@@ -86,11 +89,6 @@ a:hover, a:focus {
 	bottom: 5vh;
 	width: 80vw;
 	left: 10vw;*/
-}
-.share .btn {
-	font-size: 1.2em;
-	line-height: 1em;
-	font-family: "Shadows Into Light Two", sans-serif;
 }
 .btn * {
 	vertical-align: bottom;
@@ -133,11 +131,20 @@ a:hover, a:focus {
 }
 
 .puncontent {
-	font-size: 2.5em;
+	font-size: 2.2em;
 	line-height: 1.2em;
-	padding: 15vh 10vw;
-	min-height: 70vh;
-	padding-top: 20vh;
+	padding: 10vh 10vw;
+	min-height: 80vh;
+	padding-top: 25vh;
+}
+.center {
+	text-align: center;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -345,7 +352,7 @@ th {
 .punnylisting {
 	text-align: center;
 	list-style: decimal;
-	padding: 0;
+	/*padding: 0;*/
 	font-size: 1.2em;
 }
 .punnylisting li {
@@ -374,7 +381,7 @@ footer {
 
 
 /* Breakpoint 1 */
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
 	.site-header {
 		font-size: 20px;
 	}
@@ -384,14 +391,14 @@ footer {
 }
 
 /* Breakpoint 2 */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
 	footer {
 		font-size: 14px;
 	}
 }
 
 /* Breakpoint 3 */
-@media screen and (max-width: 540px) {
+@media (max-width: 540px) {
 	.site-header {
 		font-size: 18px;
 	}

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-	<meta name="viewport" content="width=device-width, height=device-height, maximum-scale=10.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=1" />
+	<meta name="viewport" content="width=device-width, maximum-scale=4.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=1" />
 	<meta name="description" content="a place to find puns by daniel. "/>
 	<meta name="author" content="eurica inc. "/>
 	<link rel="icon" href="/images/logo-small.png" />
@@ -15,10 +15,10 @@
 	<header class="site-header">
 		<h1><a href="/"><div class="circle">2punny</div></a></h1>
 		<nav>
-			<a href="/random" {% if page.url contains "/random" %}class="active"{% endif %}><span>rand<span class="hidewhensmall">om</span></span></a>
-			<a href="/all" {% if page.url contains "/all" %}class="active"{% endif %}><span><span class="hidewhensmall">see-'em-</span>all</span></a>
+			<a href="/random" {% if page.url contains "/random" %}class="active"{% endif %}><i class="icon-shuffle"></i><!-- <span>rand<span class="hidewhensmall">om</span> --></span></a>
+			<a href="/all" {% if page.url contains "/all" %}class="active"{% endif %}><i class="icon-drawer"></i><!-- <span><span class="hidewhensmall">see-'em-</span>all</span> --></a>
 			<a href="http://facebook.com/2punny" target="_blank"><i class="icon-facebook"></i></a>
-			<a href="/about" {% if page.url contains "/about" %}class="active"{% endif %}><span>ab<span class="hidewhensmall">ou</span>t</span></a>
+			<a href="/about" {% if page.url contains "/about" %}class="active"{% endif %}><i class="icon-info"></i><!-- <span>ab<span class="hidewhensmall">ou</span>t</span> --></a>
 		</nav>
 	</header>
 	{{ content }}
