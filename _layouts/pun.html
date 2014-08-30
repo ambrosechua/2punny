@@ -1,6 +1,8 @@
 ---
 layout: default
 footer: hidden
+ogdescription: "Check out more puns at 2punny.uni.me! "
+ogisarticle: true
 ---
 <main class="pun">
 	<div class="puncontent" style="background: {{ page.background }}; color: {{ page.color }};">
@@ -25,7 +27,7 @@ document.querySelector(".twitter").addEventListener("click", function (e) {
 
 document.querySelector(".facebook").addEventListener("click", function (e) {
 	e.preventDefault();
-	// window.open("https://www.facebook.com/dialog/share?app_id=556080077853061&display=popup&href=" + url + "&redirect_uri=" + url, "_blank", "height=320,width=480");
+	// window.open("https://www.facebook.com/dialog/share?app_id=556080077853061&display=popup&href=" + url + "&redirect_uri=" + url + "", "_blank", "height=320,width=480");
 	FB.ui(
 	 {
 	  method: 'share',
@@ -35,9 +37,9 @@ document.querySelector(".facebook").addEventListener("click", function (e) {
 
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '556080077853061',
+      appId      : '560376084090127',
       xfbml      : false,
-      // version    : 'v2.0'
+      version    : 'v2.0'
     });
   };
 
@@ -45,7 +47,7 @@ document.querySelector(".facebook").addEventListener("click", function (e) {
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/all.js";
+     js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 

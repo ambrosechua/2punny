@@ -10,6 +10,13 @@
 	<link rel="stylesheet" href="/styles/main.css" />
 	<link rel="stylesheet" href="/styles/icomoon/style.css" />
 	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Coming+Soon' rel='stylesheet' type='text/css'>
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta property="og:description" content="{{ page.ogdescription }}" />
+	{% if page.ogisarticle %}<meta property="og:type" content="article" />{% endif %}
+	<meta property="og:site_name" content="2punny" />
+	<meta property="og:image" content="/images/puns{{ page.url }}.png" />
+	<meta property="og:url" content="http://2punny.uni.me{{ page.url }}" />
+	<meta property="fb:app_id" content="560376084090127" />
 </head>
 <body>
 	<header class="site-header">
